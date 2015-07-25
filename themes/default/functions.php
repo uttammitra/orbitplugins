@@ -274,18 +274,3 @@ function exitpopup_description() {
 
 	return  $output;
 }
-
-function exitpopup_credit() {
-	$o = exitpopup_settings();
-	extract( $o );
-
-	$output = '';
-
-	if ( !empty( $footer_credit ) ) {
-		$output = '<div id="seed-csp4-credit">';
-		$output .= '<a target="_blank" href="http://www.exitpopup.com/?utm_source=exitpopup-credit-link&utm_medium=banner&utm_campaign=exitpopup-plugin-credit-link"><img src="'.plugins_url('exitpopup',dirname('.')).'/themes/default/images/exitpopup-credit.png"></a>';
-		$output .= '</div>';
-	}
-
-	return  $output;
-}

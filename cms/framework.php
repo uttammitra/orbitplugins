@@ -518,5 +518,9 @@ class exitpopup_ADMIN
               echo '</tr>';
           }
       }
+	  
+	 function exitpopupcore() {
+		get_default_template();
+	} 
 
 }

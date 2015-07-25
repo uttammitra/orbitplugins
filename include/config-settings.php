@@ -49,28 +49,13 @@ function exitpopup_get_options(){
         "id" => "status",
         "label" => __( "Status", 'exitpopup' ),
         "option_values" => array(
-            '0' => __( 'Disabled', 'exitpopup' ),
-            '1' => __( 'Enable Exit POPUP Mode', 'exitpopup' ),
-            '2' => __( 'Enable Maintenance Mode', 'exitpopup' )
-        ),
-        "desc" => __( "When you are logged in you'll see your normal website. Logged out visitors will see the Exit POPUP or Maintenance page. Exit POPUP Mode will be available to search engines if your site is not private. Maintenance Mode will notify search engines that the site is unavailable.", 'exitpopup' ),
+            '0' => __( 'Inactive', 'exitpopup' ),
+            '1' => __( 'Enable Exit POPUP Global', 'exitpopup' ),
+            '2' => __( 'Enable Exit POPUP Individual Page/Post', 'exitpopup' )
+        ),      
         "default_value" => "0"
     );
 
-
-    $exitpopup_maintenance_file = WP_CONTENT_DIR."/maintenance.php";
-    if (file_exists($exitpopup_maintenance_file)) {
-    $exitpopup_options[ ] = array(
-        "type" => "checkbox",
-        "id" => "enable_maintenance_php",
-        "label" => __( "Use maintenance.php", 'exitpopup' ),
-        "desc" => __('maintenance.php detected, would you like to use this for your maintenance page?', 'exitpopup'),
-        "option_values" => array(
-             'name' => __( 'Yes', 'exitpopup' ),
-             //'required' => __( 'Make Name Required', 'exitpopup' ),
-        )
-    );
-    }
 
     // Page Setttings
     $exitpopup_options[ ] = array(

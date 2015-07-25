@@ -38,6 +38,7 @@ function exitpopup_installtion(){
 register_activation_hook( __FILE__, 'exitpopup_installtion' );
 
 
+
 if( is_admin() ) {
 // Admin Only
 	require_once( 'include/config-settings.php' );
@@ -45,5 +46,7 @@ if( is_admin() ) {
     add_action( 'plugins_loaded', array( 'exitpopup_ADMIN', 'get_instance' ) );
 } else {
 // Public only
+
+exitpopupcore();
 
 }
